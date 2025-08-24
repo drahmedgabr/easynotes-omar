@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: "Zain", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgb(121, 191, 235), rgb(50, 137, 191));
+    color: white;
+    font-family: "Lexend", sans-serif;
+    text-shadow: 0 0 5px rgba(0, 0, 139, 0.35);
+}
+
+.header h1 {
+    animation: headerAnimation 1s;
+}
+
+@keyframes headerAnimation {
+    from {
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+}
+
+#bottomDiv {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    height: 10vh;
+}
+
+#bottomDiv div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgb(121, 191, 235), rgb(50, 137, 191));
+    color: white;
+    font-size: 30px;
+    text-shadow: 0 0 5px rgba(0, 0, 139, 0.35);
+}
+
+#bottomDiv div:nth-child(1){
+    border-right: 3px solid;
+}
+
+#bottomDiv div:hover {
+    cursor: pointer;
+    background-image: linear-gradient(rgb(50, 137, 191));
+}
+
+#bottomDiv div:active {
+    background-image: linear-gradient(rgb(34, 91, 126));
+}
+
+#addNoteButton {
+    position: fixed;
+    right: 10px;
+    bottom: 12vh;
+    font-size: 40px;
+    color: rgb(75, 157, 207);
+    transition: 0.3s;
+}
+
+#addNoteButton:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#addNoteButton:active {
+    color: rgb(34, 91, 126);
+}
+
+#mainDiv {
+    margin-bottom: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 74vh;
+}
+
+#mainDiv #emptyNotes {
+    text-align: center;
+    font-size: 18px;
+    color: #607D8B;
+}
+
+#mainDiv #emptyNotes img {
+    width: 50%;
+}
