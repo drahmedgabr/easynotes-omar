@@ -98,3 +98,13 @@ body {
 #mainDiv #emptyNotes img {
     width: 50%;
 }
+
+#myModal #noteInput {
+    width: 100%;
+    resize: none;
+    font-size: 22px;
+    padding: 10px;
+    outline-color: blueviolet;
+    color: rgba(0, 0, 0, 0.706);
+    border-radius: 5px;
+}
