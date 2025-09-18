@@ -99,6 +99,38 @@ body {
     width: 50%;
 }
 
+#mainDiv #notesDiv {
+    width: 90%;
+    min-height: 70vh;
+    display: none;
+}
+
+#mainDiv #notesDiv .note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#mainDiv #notesDiv .note p {
+    margin: 0;
+    font-size: 22px;
+    color: #607d8b;
+    margin-right: 10px;
+}
+
+#mainDiv #notesDiv .note i {
+    color: #f44336;
+    font-size: 20px;
+}
+
+#mainDiv #notesDiv .note i:hover {
+    cursor: pointer;
+}
+
 #myModal #noteInput {
     width: 100%;
     resize: none;

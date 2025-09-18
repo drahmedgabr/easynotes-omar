@@ -1,4 +1,6 @@
 const noteInput = document.getElementById("noteInput");
+const emptyNotes = document.getElementById("emptyNotes");
+const notesDiv = document.getElementById("notesDiv");
 
 let notesArray = [];
 
@@ -13,6 +15,7 @@ function addNote() {
         noteInput.value = "";
         console.log(notesArray);
         saveNotes();
+        getNotes();
     }
 
 }
@@ -26,6 +29,10 @@ function saveNotes() {
 }
 
 function getNotes() {
+
+    hideAll();
+
+    notesDiv.innerHTML = "";
     
     const notesString = localStorage.getItem("notes");
 
@@ -33,8 +40,46 @@ function getNotes() {
         console.log("notes string null");
     } else {
         notesArray = JSON.parse(notesString);
-        console.log(notesArray);
     }
+
+    if (notesArray.length == 0) {
+        emptyNotes.style.display = "block";
+
+    } else {
+        notesDiv.style.display = "block";
+
+        for (let index = 0; index < notesArray.length; index++) {
+            const element = notesArray[index];
+            
+            const noteDiv = document.createElement("div");
+            noteDiv.className = "note";
+
+            const noteText = document.createElement("p");
+            noteText.innerText = element;
+
+            const deleteIcon = document.createElement("i");
+            deleteIcon.className = "bi bi-trash3-fill";
+
+            noteDiv.appendChild(noteText);
+            noteDiv.appendChild(deleteIcon);
+
+            notesDiv.appendChild(noteDiv);
+
+        }
+
+    }
+}
+
+function hideAll() {
+    
+    const innerDivs = document.getElementsByClassName("innerDiv");
+
+    for (let index = 0; index < innerDivs.length; index++) {
+        const element = innerDivs[index];
+        
+        element.style.display = "none";
+    }
+
 }
 
 getNotes();
