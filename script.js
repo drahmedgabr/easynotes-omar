@@ -60,6 +60,15 @@ function getNotes() {
             const deleteIcon = document.createElement("i");
             deleteIcon.className = "bi bi-trash3-fill";
 
+            deleteIcon.addEventListener('click', function () {
+                const confirmMessage = confirm("Are you sure to delete this note?");
+                if (confirmMessage) {
+                    notesArray.splice(index, 1);
+                    saveNotes();
+                    getNotes();
+                }
+            });
+
             noteDiv.appendChild(noteText);
             noteDiv.appendChild(deleteIcon);
 
