@@ -1,6 +1,8 @@
 const noteInput = document.getElementById("noteInput");
 const emptyNotes = document.getElementById("emptyNotes");
 const notesDiv = document.getElementById("notesDiv");
+const loginDiv = document.getElementById("loginDiv");
+
 
 let notesArray = [];
 
@@ -77,6 +79,11 @@ function getNotes() {
         }
 
     }
+}
+
+function showProfileSection() {
+    hideAll();
+    loginDiv.style.display = "block";
 }
 
 function hideAll() {

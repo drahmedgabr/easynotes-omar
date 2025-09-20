@@ -30,6 +30,37 @@ body {
     }
 }
 
+.myInput {
+    width: 70%;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    outline-color: rgb(50, 137, 191);
+    margin: 10px;
+}
+
+.myButton {
+    width: 60%;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(50, 137, 191);
+    color: white;
+    transition: 0.3s;
+}
+
+.myButton:hover {
+    cursor: pointer;
+    background-color: rgb(32, 83, 114);
+    transform: scale(1.1);
+}
+
+.myButton:active {
+    background-color: rgb(22, 61, 85);
+}
+
 #bottomDiv {
     position: fixed;
     bottom: 0;
@@ -139,4 +170,13 @@ body {
     outline-color: blueviolet;
     color: rgba(0, 0, 0, 0.706);
     border-radius: 5px;
+}
+
+#mainDiv #loginDiv {
+    width: 80%;
+    max-width: 500px;
+    padding: 30px 20px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    text-align: center;
 }

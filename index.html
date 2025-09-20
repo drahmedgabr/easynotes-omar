@@ -28,12 +28,20 @@
         </div>
         <div id="notesDiv" class="innerDiv">
         </div>
+        <div id="loginDiv" class="innerDiv">
+            <input type="email" placeholder="Enter your email" id="loginEmailInput" class="myInput">
+            <input type="password" placeholder="Enter your password" id="loginPasswordInput" class="myInput">
+            <br><br>
+            <button class="myButton">Login</button>
+            <br><br>
+            <button class="myButton">Signup</button>
+        </div>
     </div>
     <div id="bottomDiv">
-        <div>
+        <div onclick="showProfileSection()">
             <i class="bi bi-person-fill"></i>
         </div>
-        <div>
+        <div onclick="getNotes()">
             <i class="bi bi-house-door-fill"></i>
         </div>
     </div>
