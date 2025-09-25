@@ -28,13 +28,22 @@
         </div>
         <div id="notesDiv" class="innerDiv">
         </div>
-        <div id="loginDiv" class="innerDiv">
+        <div id="loginDiv" class="innerDiv customDiv">
             <input type="email" placeholder="Enter your email" id="loginEmailInput" class="myInput">
             <input type="password" placeholder="Enter your password" id="loginPasswordInput" class="myInput">
             <br><br>
-            <button class="myButton">Login</button>
+            <button class="myButton" onclick="loginUser()">Login</button>
             <br><br>
             <button class="myButton">Signup</button>
+        </div>
+        <div id="userAccountDiv" class="innerDiv customDiv">
+            <h3 id="welcomeH3"></h3>
+            <br>
+            <button class="myButton">Download Notes</button>
+            <br><br>
+            <button class="myButton">Upload Notes</button>
+            <br><br>
+            <button class="myButton" onclick="logoutUser()">Logout</button>
         </div>
     </div>
     <div id="bottomDiv">
