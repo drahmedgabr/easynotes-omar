@@ -147,4 +147,54 @@ function logoutUser() {
     loginDiv.style.display = "block";
 }
 
+async function uploadNotes() {
+    const userId = localStorage.getItem("userId");
+    const notesString = JSON.stringify(notesArray);
+    if(userId == null){
+        alert("User Id null please login");
+    } else {
+        const apiUrl = `https://tatbeqak.site/apps/tatbeqey/apps/easynotes/addnote?id=${userId}&notes=${notesString}`;
+
+        const response = await fetch(apiUrl);
+
+        const data = await response.json();
+
+        const status = data.status;
+
+        if(status){
+            alert("Notes uploaded successfully!");
+        } else {
+            const reason = data.reason;
+            alert(`Error while uploading notes: ${reason}`);
+        }
+    }
+}
+
+async function downloadNotes() {
+    const userId = localStorage.getItem("userId");
+    if(userId == null){
+        alert("User Id null please login");
+    } else {
+        const apiUrl = `https://tatbeqak.site/apps/tatbeqey/apps/easynotes/getnotes?id=${userId}`;
+
+        const response = await fetch(apiUrl);
+
+        const data = await response.json();
+
+        const status = data.status;
+
+        if(status){
+            const notes = data.notes;
+            notesArray = JSON.parse(notes);
+            saveNotes();
+            getNotes();
+            alert("Notes downloaded successfully");
+        } else {
+            alert("Error while downloading notes");
+        }
+        
+    }
+}
+
+
 getNotes();

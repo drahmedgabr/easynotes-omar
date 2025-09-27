@@ -180,3 +180,34 @@ body {
     border-radius: 20px;
     text-align: center;
 }
+
+@media (min-width: 1000px) {
+    #mainDiv #notesDiv {
+        width: 800px;
+    }
+
+    #mainDiv #notesDiv .note p {
+        font-size: 25px;
+    }
+
+    #mainDiv #notesDiv .note i {
+        font-size: 25px;
+    }
+
+    #mainDiv #notesDiv .note {
+        margin-bottom: 15px;
+    }
+
+    #addNoteButton {
+        font-size: 60px;
+        right: 20px;
+    }
+
+    #mainDiv #emptyNotes {
+        font-size: 25px;
+    }
+
+    #mainDiv #emptyNotes img {
+        width: 60%;
+    }
+}
